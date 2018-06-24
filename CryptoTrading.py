@@ -1,8 +1,3 @@
-#MSDS Spring 2018 
-#DATA 602 Advanced Programming Techniques
-#Assignment 2 Crypto Trading System
-#Jiadi li
-
 import datetime as dt #for date and time data type manipulation
 import numpy as np #for scientific computing methods
 import pandas as pd #for dataframe structure and relevant manipulation
@@ -28,14 +23,14 @@ def write_df_to_Mongo(dbName,collectionName,dfName):
 
 #import data from MongoDB to blotter dataframe or initialize the dataframe if no data is available
 def get_blotter_df():    
-    blotter = read_df_from_Mongo("602A2","blotter")
+    blotter = read_df_from_Mongo("db1","blotter")
     if blotter.empty:
         blotter = pd.DataFrame({'side':["Initial status"],'ticker':["None"],'quantity':[0],'executed price':[0],'execution timestamp':["1990-01-01 01:00:00"],'money in/out':[0],'cash':[100000000]})
     return blotter
 
 ##import data from MongoDB to p/l dataframe or initialize the dataframe if no data is available
 def get_pl_df():    
-    pl = read_df_from_Mongo("602A2","P/L")
+    pl = read_df_from_Mongo("db1","P/L")
     if pl.empty:
         pl = pd.DataFrame({'ticker':[],'position':[],'current market price':[],'vmap':[],'unrealized p/l':[],'realized p/l':[],'total p/l':[],'allocation by shares':[],'allocation by dollars':[]})
     return pl
