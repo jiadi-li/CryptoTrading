@@ -14,7 +14,7 @@
 
 When the program is execuated, a list of 4 selection would be shown which are Trade, Show Blotter, Show P/L and Exit.
 
-1.Trade is the platform for user to enter the ticker of an interested crypto currency, evaluate the performance of the currency (given a series of valuable analytics and visualization tools), and execuate the trade by entering the quantity. Any execuated trade will be permanently stored in MongoDB as long as a collection is set.
+1. Trade is the platform for user to enter the ticker of an interested crypto currency, evaluate the performance of the currency (given a series of valuable analytics and visualization tools), and execuate the trade by entering the quantity. Any execuated trade will be permanently stored in MongoDB as long as a collection is set.
 
 2. Show Blotter would pull and display all trade history from MongoDB and print in an neat form.
 
